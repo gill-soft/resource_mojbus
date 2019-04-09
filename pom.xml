@@ -18,8 +18,13 @@
 	<repositories>
 		<repository>
 			<id>gds-repository</id>
-			<name>Repository of gds libruaries</name>
+			<name>Repository of gds libraries</name>
 			<url>https://github.com/gill-soft/gds/raw/repository</url>
+		</repository>
+		<repository>
+			<id>rate-repository</id>
+			<name>Repository of gds libraries</name>
+			<url>https://github.com/gill-soft/rate/raw/repository</url>
 		</repository>
 	</repositories>
 
@@ -134,6 +139,11 @@
 			<version>${itextpdf.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.gillsoft</groupId>
+			<artifactId>gds-rate-commons</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

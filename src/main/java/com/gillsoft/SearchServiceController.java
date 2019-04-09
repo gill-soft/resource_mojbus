@@ -107,11 +107,15 @@ public class SearchServiceController extends SimpleAbstractTripSearchService<Tri
 					throw new ResponseError("Empty result");
 				}
 				tripPackage.setRequest(TripSearchRequest.createRequest(pair, date));
+				tripPackage.setFrom(pair[0]);
+				tripPackage.setTo(pair[1]);
 				return tripPackage;
 			} catch (ResponseError e) {
 				TripPackage tripPackage = new TripPackage();
 				tripPackage.setError(e);
 				tripPackage.setRequest(TripSearchRequest.createRequest(pair, date));
+				tripPackage.setFrom(pair[0]);
+				tripPackage.setTo(pair[1]);
 				return tripPackage;
 			} catch (Exception e) {
 				return null;
